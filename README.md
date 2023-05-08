@@ -1,6 +1,6 @@
 # QueryGPT
-## Make query from natural language
-You can generate query from natural language for querying database.
+## Make database query from natural language
+You can generate query from natural language for querying database. (especially knowledge graph)
 Like this.
 ```
 'Madonna가 출현한 영화' >> MATCH (p:Person {name:"Madonna"})-[r:ACTED_IN]->(m:Movie) RETURN {movie: m.title} AS result
