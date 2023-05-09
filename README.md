@@ -21,5 +21,5 @@ This generates a Cypher query that matches the given sentence using the LLM.
 pip install requirements.txt
 ```
 
-Test Graph Structure
+## Test Graph Structure
 ![image](https://user-images.githubusercontent.com/26298389/237041908-c0b409a3-6d2f-4972-af77-4afb99345d08.png)
