@@ -1,0 +1,1 @@
+# Parsing designed ontology information for genrate training verbose.
