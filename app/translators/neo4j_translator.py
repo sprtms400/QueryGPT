@@ -36,4 +36,6 @@ def generate_cypher(message):
     # If the model apologized, remove the first line
     if "apologi" in response:
         response = " ".join(response.split("\n")[1:])
-    
+    if "`" in response:
+        response = response.split("```")[1].strip("`")
+    pri

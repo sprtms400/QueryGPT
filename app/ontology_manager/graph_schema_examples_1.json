@@ -1,0 +1,96 @@
+/**
+// Prompts for generating knowledge graph usage examples.
+// write down ontology information
+// Ontology is for RDF.
+// Graph Scheme for LPG
+**/
+
+{
+    "Node":[
+        {
+            "purpose": "This is a list of node",
+            "Presentation": {
+                "purpose": "This node contains few \"Assets\" or not.",
+                "property": [
+                    {
+                        "purpose": "The property information of \"Presentation\" Node",
+                        "PresentationId": {
+                            "purpose": "Store presentation id from database",
+                            "type": "ObjectId"
+                        },
+                        "PresentationName": {
+                            "purpose": "Store presentation name from owner",
+                            "type": "String"
+                        },
+                        "owner": {
+                            "purpose": "Store owner Name who designed this presentation",
+                            "type": "String"
+                        },
+                        "Assets": [
+                            {
+                                "purpose": "Store assets information which using it in this presentation",
+                                "AssetId": "ObjectId",
+                                "AssetName": "AssetName"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Asset": {
+                
+                "purpose": "This node a media file like, png, jpg, mp4, avi etc...",
+                "property": [
+                        {
+                        "purpose": "The property information of \"Asset\" Node",
+                        "AssetId": {
+                            "purpose": "Store asset id from database",
+                            "type": "objectId"
+                        },
+                        "AssetName": {
+                            "purpose": "Store asset name from owner",
+                            "type": "String"
+                        },
+                        "owner": {
+                            "purpose": "Store owner name who registered this asset",
+                            "type": "String"
+                        },
+                        "Objects": [
+                            {
+                                "purpose": "Store object information in media file like car, airplane, tree ..etc from object detection",
+                                "ObjectId": "ObjectId",
+                                "ObjectName": "ObjectName"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Object": {
+                "purpose": "This node a object which exists in real world or virtual world",
+                "ObjectName": {
+                    "purpose": "The name of object like car, plane.. etc",
+                    "type": "String"
+                }
+            }
+        }
+    ],
+    "Relationship":[
+        {
+            "purpose": "This is a list of relationship for example, \"Asset=>Object\" means The relationships between Asset and Object, And it has directional means, And It can be multiple relationships.",
+            "Asset=>Object": [
+                {
+                    "hasObject": {
+                        
+                        "purpose": "Some \"media file\" shows object in their media, for example \"tour de france\" image can shows bike, road, cyclists etc...",
+                        "property": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
