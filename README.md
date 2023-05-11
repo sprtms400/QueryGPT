@@ -23,4 +23,4 @@ pip install requirements.txt
 ```
 
 ## Test Graph Structure
-![image](https://user-images.githubusercontent.com/26298389/237041908-c0b409a3-6d2f-4972-af77-4afb99345d08.png)
+![Cublick Graph (2)](https://github.com/sprtms400/QueryGPT/assets/26298389/b1d1e210-d7fc-4bb1-ad9c-45acc74837de)
