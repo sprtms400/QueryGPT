@@ -10,5 +10,5 @@
 #
 # case 2    : 
 # Answer 2  :
-examples = """
+few_shot_examples = """
 """

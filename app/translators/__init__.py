@@ -1,1 +1,1 @@
-from .neo4j_translator import Neo4J
+from .neo4j_translator import generate_cypher

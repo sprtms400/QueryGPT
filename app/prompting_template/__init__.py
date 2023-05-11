@@ -1,1 +1,2 @@
-from .examples import examples
+from .few_shot_examples import few_shot_examples
+from .zero_shot_examples import zero_shot_examples

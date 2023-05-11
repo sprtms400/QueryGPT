@@ -8,13 +8,17 @@ import translators
 from flask import Flask, request, jsonify
 app = Flask(__name__)
 
-@app.route('/natToCypher', method=['POST'])
+## application/x-www-form-urlencoded
+@app.route('/natToCypher', methods=['POST'])
 def natToCypher():
-    data = request.get_json()
+    data = request.form
     natural_language = data['natural_language']
-    cypher_query = translators.Neo4J(natural_language)
+    cypher_query = translators.generate_cypher(natural_language)
     return jsonify({
         'natural_language': natural_language,
         'cypher_query': cypher_query
         }
     )
+
+if __name__ == '__main__':
+    app.run(debug=True, port=8080)
